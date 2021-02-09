@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/ib_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:contentDescription="@string/image_view"
+            android:src="@drawable/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_home_hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/hello"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ib_profile" />
+
+        <TextView
+            android:id="@+id/tv_home_make"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/make_your_own_food"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_hello" />
+
+        <TextView
+            android:id="@+id/tv_home_stay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/stay_at"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_make" />
+
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="@string/home"
+            android:textColor="@color/main"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_home_stay"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_make" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_home_search"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            app:boxBackgroundColor="@color/Transparent"
+            app:boxBackgroundMode="filled"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_stay"
+            app:startIconDrawable="@drawable/ic_search">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search_any_recipe"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/iv_home_notif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/image_view"
+            android:src="@drawable/notification"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/ib_profile"
+            app:layout_constraintTop_toTopOf="@+id/ib_profile" />
+
+        <ImageView
+            android:id="@+id/iv_home_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/image_view"
+            android:src="@drawable/popular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_home_search" />
+
+        <ImageView
+            android:id="@+id/iv_home_wes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:contentDescription="@string/image_view"
+            android:src="@drawable/western"
+            app:layout_constraintStart_toEndOf="@+id/iv_home_pop"
+            app:layout_constraintTop_toTopOf="@+id/iv_home_pop" />
+
+        <ImageView
+            android:id="@+id/iv_home_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:contentDescription="@string/image_view"
+            android:src="@drawable/desserts"
+            app:layout_constraintStart_toEndOf="@+id/iv_home_wes"
+            app:layout_constraintTop_toTopOf="@+id/iv_home_wes" />
+
+        <ImageView
+            android:id="@+id/iv_home_drink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:contentDescription="@string/image_view"
+            android:src="@drawable/drinks"
+            app:layout_constraintStart_toEndOf="@+id/iv_home_des"
+            app:layout_constraintTop_toTopOf="@+id/iv_home_des" />
+
+        <TextView
+            android:id="@+id/tv_home_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/popular"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/iv_home_pop"
+            app:layout_constraintStart_toStartOf="@+id/iv_home_pop"
+            app:layout_constraintTop_toBottomOf="@+id/iv_home_pop" />
+
+        <TextView
+            android:id="@+id/tv_home_wes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/western"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/iv_home_wes"
+            app:layout_constraintStart_toStartOf="@+id/iv_home_wes"
+            app:layout_constraintTop_toBottomOf="@+id/iv_home_wes" />
+
+        <TextView
+            android:id="@+id/tv_home_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/dessert"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/iv_home_des"
+            app:layout_constraintStart_toStartOf="@+id/iv_home_des"
+            app:layout_constraintTop_toBottomOf="@+id/iv_home_des" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/drinks"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/iv_home_drink"
+            app:layout_constraintStart_toStartOf="@+id/iv_home_drink"
+            app:layout_constraintTop_toBottomOf="@+id/iv_home_drink" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/popular_recipes"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_pop" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_home_salad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/image_view"
+                    android:src="@drawable/potatosalad"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_home_omelette"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/image_view"
+                    android:src="@drawable/omelette"
+                    app:layout_constraintStart_toEndOf="@+id/iv_home_salad"
+                    app:layout_constraintTop_toTopOf="@+id/iv_home_salad" />
+
+                <TextView
+                    android:id="@+id/tv_home_salad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/potato_salad"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/iv_home_salad"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_home_salad" />
+
+                <TextView
+                    android:id="@+id/tv_home_salad_categ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/western"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_home_salad"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/tv_home_salad"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_home_salad" />
+
+                <TextView
+                    android:id="@+id/tv_home_curry_categ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/western"
+                    app:layout_constraintStart_toStartOf="@+id/tv_home_curry"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_home_curry" />
+
+                <TextView
+                    android:id="@+id/tv_home_omelette"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/feta_omelette"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_home_omelette"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/iv_home_omelette"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_home_omelette" />
+
+                <TextView
+                    android:id="@+id/tv_home_omelette_categ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/asian"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_home_omelette"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/tv_home_omelette"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_home_omelette" />
+
+                <TextView
+                    android:id="@+id/tv_home_laksa_categ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/asian"
+                    app:layout_constraintStart_toStartOf="@+id/tv_home_laksa"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_home_laksa" />
+
+                <ImageView
+                    android:id="@+id/iv_home_laksa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/image_view"
+                    android:src="@drawable/veganlaksa"
+                    app:layout_constraintStart_toStartOf="@+id/tv_home_salad_categ"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_home_salad_categ" />
+
+                <ImageView
+                    android:id="@+id/iv_home_curry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/image_view"
+                    android:src="@drawable/greencurry"
+                    app:layout_constraintStart_toEndOf="@+id/iv_home_laksa"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_home_omelette_categ" />
+
+                <TextView
+                    android:id="@+id/tv_home_laksa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/vegan_laksa"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_home_laksa" />
+
+                <TextView
+                    android:id="@+id/tv_home_curry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/green_curry"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/iv_home_curry"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_home_curry" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
